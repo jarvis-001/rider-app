@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_myapp/AllScreens/loginScreen.dart';
 
 class RegistrationScreen extends StatelessWidget {
+  static const String idScreen = "register";
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,7 +32,7 @@ class RegistrationScreen extends StatelessWidget {
                 padding: EdgeInsets.all(20.0),
                 child: Column(
                   children: [
-                     SizedBox(
+                    SizedBox(
                       height: 1.0,
                     ),
                     TextField(
@@ -45,7 +48,6 @@ class RegistrationScreen extends StatelessWidget {
                       ),
                       style: TextStyle(fontSize: 14.0),
                     ),
-
                     SizedBox(
                       height: 1.0,
                     ),
@@ -62,8 +64,7 @@ class RegistrationScreen extends StatelessWidget {
                       ),
                       style: TextStyle(fontSize: 14.0),
                     ),
-
-                     SizedBox(
+                    SizedBox(
                       height: 1.0,
                     ),
                     TextField(
@@ -125,7 +126,9 @@ class RegistrationScreen extends StatelessWidget {
               ),
               FlatButton(
                   onPressed: () {
-                    print(" Login button clicked");
+                    
+                    Navigator.pushNamedAndRemoveUntil(
+                        context, LoginScreen.idScreen, (route) => false);
                   },
                   child: Text(
                     "Already have an Account? Login Here",
