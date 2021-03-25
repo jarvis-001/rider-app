@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_myapp/AllScreens/loginScreen.dart';
 import 'package:flutter_myapp/AllScreens/mainscreen.dart';
 
+import 'AllScreens/registrationScreen.dart';
+
 void main() {
   runApp(MyApp());
 }
@@ -11,11 +13,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title:'Taxi rider app',
       theme: ThemeData(
-        fontFamily: "Signatra",
+        fontFamily: "Brand Bold",
         primaryColor: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: LoginScreen(),
+      home: RegistrationScreen(),
       debugShowCheckedModeBanner: false,
     );
   }

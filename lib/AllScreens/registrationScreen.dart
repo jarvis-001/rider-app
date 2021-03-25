@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class LoginScreen extends StatelessWidget {
+class RegistrationScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -11,7 +11,7 @@ class LoginScreen extends StatelessWidget {
           child: Column(
             children: [
               SizedBox(
-                height: 45.0,
+                height: 20.0,
               ),
               Image(
                 image: AssetImage("images/logo.png"),
@@ -21,7 +21,7 @@ class LoginScreen extends StatelessWidget {
               ),
               SizedBox(height: 15.0),
               Text(
-                "Login as a Rider",
+                "Sign Up as a Rider",
                 style: TextStyle(fontSize: 24.0, fontFamily: "Brand Bold"),
                 textAlign: TextAlign.center,
               ),
@@ -29,6 +29,23 @@ class LoginScreen extends StatelessWidget {
                 padding: EdgeInsets.all(20.0),
                 child: Column(
                   children: [
+                     SizedBox(
+                      height: 1.0,
+                    ),
+                    TextField(
+                      keyboardType: TextInputType.text,
+                      decoration: InputDecoration(
+                        labelText: "Name",
+                        labelStyle:
+                            TextStyle(fontSize: 14.0, fontFamily: "Brand Bold"),
+                        hintStyle: TextStyle(
+                          color: Colors.grey,
+                          fontSize: 10.0,
+                        ),
+                      ),
+                      style: TextStyle(fontSize: 14.0),
+                    ),
+
                     SizedBox(
                       height: 1.0,
                     ),
@@ -36,6 +53,23 @@ class LoginScreen extends StatelessWidget {
                       keyboardType: TextInputType.emailAddress,
                       decoration: InputDecoration(
                         labelText: "Email",
+                        labelStyle:
+                            TextStyle(fontSize: 14.0, fontFamily: "Brand Bold"),
+                        hintStyle: TextStyle(
+                          color: Colors.grey,
+                          fontSize: 10.0,
+                        ),
+                      ),
+                      style: TextStyle(fontSize: 14.0),
+                    ),
+
+                     SizedBox(
+                      height: 1.0,
+                    ),
+                    TextField(
+                      keyboardType: TextInputType.phone,
+                      decoration: InputDecoration(
+                        labelText: "Phone",
                         labelStyle:
                             TextStyle(fontSize: 14.0, fontFamily: "Brand Bold"),
                         hintStyle: TextStyle(
@@ -73,7 +107,7 @@ class LoginScreen extends StatelessWidget {
                         height: 50.0,
                         child: Center(
                           child: Text(
-                            "login",
+                            "Register",
                             style: TextStyle(
                                 fontSize: 18.0, fontFamily: "Brand Bold"),
                           ),
@@ -83,7 +117,7 @@ class LoginScreen extends StatelessWidget {
                         borderRadius: new BorderRadius.circular(24.0),
                       ),
                       onPressed: () {
-                        print("loginbutton clicked");
+                        print("Register button clicked");
                       },
                     )
                   ],
@@ -91,10 +125,10 @@ class LoginScreen extends StatelessWidget {
               ),
               FlatButton(
                   onPressed: () {
-                    print(" Registerbutton clicked");
+                    print(" Login button clicked");
                   },
                   child: Text(
-                    "Do not have an Account? Register Here",
+                    "Already have an Account? Login Here",
                   ))
             ],
           ),
