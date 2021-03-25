@@ -86,7 +86,7 @@ class LoginScreen extends StatelessWidget {
                         borderRadius: new BorderRadius.circular(24.0),
                       ),
                       onPressed: () {
-                        print("loginbutton clicked");
+                        print("login button clicked");
                       },
                     )
                   ],
